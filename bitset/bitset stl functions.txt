@@ -1,0 +1,70 @@
+____________________________________________________________________________
+
+ A bitset stores bits (elements with only two possible values: 0 or 1, true or false, ...).
+
+The class emulates an array of bool elements, but optimized for space allocation: generally, each element occupies only one bit (which, on most systems, is eight times less than the smallest elemental type: char).
+
+Each bit position can be accessed individually: for example, for a given bitset named foo, the expression foo[3] accesses its fourth bit, just like a regular array accesses its elements. But because no elemental type is a single bit in most C++ environments, the individual elements are accessed as special references type (see bitset::reference).
+
+Bitsets have the feature of being able to be constructed from and converted to both integer values and binary strings (see its constructor and members to_ulong and to_string). They can also be directly inserted and extracted from streams in binary format (see applicable operators).
+
+The size of a bitset is fixed at compile-time (determined by its template parameter). For a class that also optimizes for space allocation and allows for dynamic resizing, see the bool specialization of vector (vector<bool>).
+
+
+_____________________________________________________________________________
+
+
+***********************************************
+        bitset <size> b;
+        bitset <size> b(18);
+        bitset <size> b("1010101");
+        b=18;
+***********************************************
+
+Bit access
+
+operator[]
+    Access bit (public member function )
+
+count
+    Count bits set (public member function )
+
+size
+    Return size (public member function )
+
+test
+    Return bit value (public member function )
+
+any
+    Test if any bit is set (public member function )
+
+none
+    Test if no bit is set (public member function )
+
+all
+    Test if all bits are set (public member function )
+    
+    
+    
+Bit operations
+
+set
+    Set bits (public member function )
+
+reset
+    Reset bits (public member function )
+
+flip
+    Flip bits (public member function )
+    
+    
+Bitset operations
+
+to_string
+    Convert to string (public member function )
+
+to_ulong
+    Convert to unsigned long integer (public member function )
+
+to_ullong
+    Convert to unsigned long long (public member function )
